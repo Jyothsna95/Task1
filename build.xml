@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project default="compile">
 <target name="clean">  
-<delete dir="./build/classes"/>
-<delete dir="./build"/>
+<delete dir="./build1/classes1"/>
+<delete dir="./build1"/>
 </target>
 <target name="compile" depends="clean">
-<mkdir dir="./build"/>
-<mkdir dir="./build/classes"/>
-<javac includeantruntime="true" srcdir="./src" destdir="./build/classes"/>
+<mkdir dir="./build1"/>
+<mkdir dir="./build1/classes1"/>
+<javac includeantruntime="true" srcdir="./src" destdir="./build1/classes1"/>
 </target>
 </project>
