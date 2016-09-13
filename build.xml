@@ -16,8 +16,7 @@
     <pathelement location="lib/mysql-connector-java-5.1.38-bin.jar"/>
     <path refid="classpath.base" />
   </path>
-<--
--->
+
   <target name="Jar" depends="compile">
         <mkdir dir="./build/jar"/>
         <jar destfile="./build/jar/Project.jar" basedir="${main.build.dir}">
@@ -27,13 +26,15 @@
                 <attribute name="Implementation-Version" value="${version}"/>
             </manifest>
         </jar>
-    </target>
+  </target>
+    
   <target name="compile" depends="clean">
     <mkdir dir="${main.build.dir}"/>
     <javac srcdir="${main.src.dir}" destdir="${main.build.dir}" includeantruntime="false">
       <classpath refid="classpath.base"/>
     </javac>
   </target>
+  
   <!-- delete all class files -->
   <!-- To run this: use "ant clean" -->
   <target name="clean">
